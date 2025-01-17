@@ -13,7 +13,10 @@ export class Patient {
   get id(): string {
     return this.patient?.uuid;
   }
-
+export interface Patient {
+  // ...existing properties...
+  exemptionStatus?: 'cash' | 'exemption';
+}
   get personUuid(): string {
     return this.patient?.person.uuid;
   }
